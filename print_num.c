@@ -12,17 +12,18 @@ int print_integer(va_list list)
 	if (number < 0)
 	{
 		_putchar('-');
-		num = -num;
+		number = -number;
 	}
-	while (integer / divisor > 9)
+	while (number / divisor > 9)
 		divisor *= 10;
 	while (divisor > 0)
 	{
 		digit = number / divisor;
 		_putchar('0' + digit);
-		num %= divisor;
+		number %= divisor;
 		divisor /= 10;
 		count++;
+	        
 	}
 	return (count);
 }
