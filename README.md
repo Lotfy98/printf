@@ -1,4 +1,4 @@
-printf Project
+#printf Project
 
 printf is a C standard library function that stands for "print formatted." It is widely used for output formatting in C and C++ programs. printf allows you to generate formatted output by specifying a format string and one or more additional arguments. Here's a brief overview of how printf works:
 
