@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf - custom printf function
+ * _printf - custom printf function
  * @format: format.
  * Return: Printed printed_chars
  */
