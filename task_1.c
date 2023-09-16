@@ -10,7 +10,7 @@ int i = 0, l = 0;
 char *s;
 s = va_arg(list, char *);
 if (s == NULL)
-s = "(null)";
+return (0);
 while (s[i] != '\0')
 {
 l += _putchar(s[i]);
