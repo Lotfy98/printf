@@ -10,12 +10,13 @@
  */
 int parser(const char *format, convert_specs func_list[], va_list args)
 {
-	int i, e = 0, result = 0, retValue;
+	int i, e, result = 0, retValue;
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
+			e = 0;
 			while (func_list[e].sym)
 			{
 				if (format[i + 1] == func_list[e].sym[0])
@@ -24,8 +25,9 @@ int parser(const char *format, convert_specs func_list[], va_list args)
 					if (retValue == -1)
 						return (-1);
 					result += retValue;
+					i++; /*increment i when a valid format specifier is found*/
 					break;
-				}													                e++;
+				} e++;
 			}
 			if (!func_list[e].sym && format[i + 1] != ' ')
 			{
@@ -37,7 +39,7 @@ int parser(const char *format, convert_specs func_list[], va_list args)
 				}
 				else
 					return (-1);
-			} i++;
+			}
 		}
 		else
 		{

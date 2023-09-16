@@ -6,25 +6,34 @@
  */
 int print_integer(va_list list)
 {
-int number = va_arg(list, int);
-int count = 0, digit, divisor = 1;
+	int *num, x, y, l, n;
 
-if (number < 0)
-{
-_putchar('-');
-number = -number;
-}
-while (number / divisor > 9)
-{
-divisor *= 10;
-}
-while (divisor > 0)
-{
-digit = number / divisor;
-_putchar('0' + digit);
-number %= divisor;
-divisor /= 10;
-count++;
-}
-return (count);
+	num = malloc(sizeof(int) * 1000);
+	if (!num)
+	{
+		free(num);
+		return (0);
+	}
+	n = va_arg(list, int);
+	l = 0;
+	if (n < 0)
+	{
+		l += _putchar('-');
+		n *= -1;
+	}
+	x = 0;
+	while (n != 0)
+	{
+		num[x] = n % 10;
+		n /= 10;
+		x++;
+	}
+	y = x - 1;
+	while (y >= 0)
+	{
+		l += _putchar('0' + num[y]);
+		y--;
+	}
+	free(num);
+	return (l);
 }
