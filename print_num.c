@@ -17,6 +17,7 @@ number = -number;
 while (number / divisor > 9)
 {
 divisor *= 10;
+}
 while (divisor > 0)
 {
 digit = number / divisor;
@@ -24,7 +25,6 @@ _putchar('0' + digit);
 number %= divisor;
 divisor /= 10;
 count++;
-}
 }
 return (count);
 }
