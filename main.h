@@ -23,5 +23,6 @@ int _putchar(char c);
 int print_char(va_list);
 int print_string(va_list);
 int print_percent(va_list);
+int parser(const char *format, convert_specs func_list[], va_list args);
 
 #endif
