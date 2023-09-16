@@ -25,7 +25,6 @@ int parser(const char *format, convert_specs func_list[], va_list args)
 					if (retValue == -1)
 						return (-1);
 					result += retValue;
-					i++; /*increment i when a valid format specifier is found*/
 					break;
 				} e++;
 			}
@@ -39,7 +38,7 @@ int parser(const char *format, convert_specs func_list[], va_list args)
 				}
 				else
 					return (-1);
-			}
+			} i++;
 		}
 		else
 		{
