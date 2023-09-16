@@ -6,9 +6,10 @@
  */
 int print_integer(va_list list)
 {
-	int num[100], x, y, l, n;
+	int x, y, l, n;
+	int num[100];
 
-	if (!num)
+	if (num == NULL)
 	{
 		return (0);
 	}
@@ -29,7 +30,7 @@ int print_integer(va_list list)
 	y = x - 1;
 	while (y >= 0)
 	{
-		l += _putchar('0' + num[y]);
+		l += _putchar(48 + num[y]);
 		y--;
 	}
 	return (l);
