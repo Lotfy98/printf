@@ -16,7 +16,7 @@ while (s[i] != '\0')
 l += _putchar(s[i]);
 i++;
 }
-return (l - 1);
+return (l);
 }
 
 /**
