@@ -6,12 +6,10 @@
  */
 int print_integer(va_list list)
 {
-	int *num, x, y, l, n;
+	int num[100], x, y, l, n;
 
-	num = malloc(sizeof(int) * 1000);
 	if (!num)
 	{
-		free(num);
 		return (0);
 	}
 	n = va_arg(list, int);
@@ -34,6 +32,5 @@ int print_integer(va_list list)
 		l += _putchar('0' + num[y]);
 		y--;
 	}
-	free(num);
 	return (l);
 }
