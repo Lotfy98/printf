@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <limits.h>
 
-#define UNUSED(x) (void)(x)
-
 
 /**
  *struct convert - convert specifier

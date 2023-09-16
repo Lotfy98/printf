@@ -37,7 +37,8 @@ return (1);
  */
 int print_percent(va_list list)
 {
-int percent = va_arg(list, int);
+int percent;
+percent = va_arg(list, int);
 percent = 37;
 _putchar(percent);
 return (1);
