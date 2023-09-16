@@ -15,7 +15,8 @@ struct convert
 {
 	char *sym;
 	int (*f)(va_list);
-} convert_specs;
+};
+typedef struct convert convert_specs;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
