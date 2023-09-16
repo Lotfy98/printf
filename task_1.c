@@ -11,7 +11,7 @@ char *s;
 s = va_arg(list, char *);
 if (s == NULL)
 return (0);
-while (s[0] != '\0')
+while (s[i] != '\0')
 {
 l += _putchar(s[i]);
 i++;
