@@ -15,7 +15,9 @@ int _printf(const char *format, ...)
 		{"s", print_string},
 		{"%", print_percent},
 		{"i", print_integer},
-		{"d", print_integer}
+		{"d", print_integer},
+		{"b", print_binary},
+
 	};
 		/* creating va_list*/
 	va_list args;
