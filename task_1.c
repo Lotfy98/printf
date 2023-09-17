@@ -41,9 +41,7 @@ int print_char(va_list list)
  */
 int print_percent(va_list list)
 {
-int percent;
-percent = va_arg(list, int);
-percent = 37;
-_putchar(percent);
+(void)list;
+_putchar('%');
 return (1);
 }
