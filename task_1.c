@@ -7,9 +7,10 @@
 int print_string(va_list list)
 {
 int i, l; 
+char *s;
 i = 0;
 l = 0;
-char *s;
+
 s = va_arg(list, char *);
 if (s == NULL)
 s = "(null)";
