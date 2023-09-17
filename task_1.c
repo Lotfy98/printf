@@ -6,13 +6,9 @@
  */
 int print_string(va_list list)
 {
-<<<<<<< HEAD
-int i = 0, l = 0; 
-char *s;
-=======
+
 	int i = 0, l = 0;
 	char *s;
->>>>>>> 68ab6421748ceeec2bcf0c286decb8c05f531c97
 
 
 	s = va_arg(list, char *);
