@@ -9,9 +9,9 @@ int print_integer(va_list list)
 	int x, y, l, n;
 	int num[100];
 
-	if (num == NULL)
+	/*if (num == NULL)*/
 
-	return (0);
+	/*return (0); */
 
 	n = va_arg(list, int);
 	l = 0;
@@ -21,6 +21,13 @@ int print_integer(va_list list)
 		n *= -1;
 	}
 	x = 0;
+
+if (n == 0)
+{
+l += _putchar('0');
+}
+else
+{
 	while (n != 0)
 	{
 		num[x] = n % 10;
@@ -33,5 +40,6 @@ int print_integer(va_list list)
 		l += _putchar(48 + num[y]);
 		y--;
 	}
+}
 	return (l);
 }

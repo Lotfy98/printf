@@ -11,10 +11,22 @@ int main(void)
 {
 int len;
 int len2;
+int x = 0;
+
+int s = 55;
 
 
 len = _printf("Let's try to printf a simple sentence.\n");
 len2 = printf("Let's try to printf a simple sentence.\n");
+
+_printf("x:[%d]\n", x);
+printf("x:[%d]\n", x);
+_printf("xi:[%i]\n", x);
+printf("xi:[%d]\n", x);
+/* _printf("b:[%d]\n", b);*/
+/*_printf("bi:[%i]\n", b);*/
+_printf("s:[%d]\n", s);
+_printf("si:[%d]\n", s);
 
 _printf("Length:[%d, %i]\n", len, len);
 printf("Length:[%d, %i]\n", len2, len2);
