@@ -6,17 +6,26 @@
  */
 int print_string(va_list list)
 {
-int i = 0, l = 0;
-char *s;
-s = va_arg(list, char *);
-if (s == NULL)
-s = "(null)";
-while (s[i] != '\0')
-{
-l += _putchar(s[i]);
-i++;
-}
-return (l);
+	int i = 0, l = 0;
+	char *s;
+
+
+	s = va_arg(list, char *);
+	if (s == NULL)
+		s = "(null)";
+	while (s[i] != '\0')
+	{
+		if (isprint(s[i]))
+			l += _putchar(s[i]);
+		
+		else
+			continue;
+		
+		i++;
+		if (i > 200)
+			break;
+	}
+	return (l);
 }
 
 /**
@@ -26,8 +35,13 @@ return (l);
  */
 int print_char(va_list list)
 {
-_putchar(va_arg(list, int));
-return (1);
+	int c = va_arg(list, int);
+
+	if (!isprint(c))
+		return (0);
+
+	_putchar(c);
+	return (1);
 }
 
 /**
