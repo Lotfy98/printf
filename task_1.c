@@ -13,7 +13,7 @@ int print_string(va_list list)
 	s = va_arg(list, char *);
 	if (s == NULL)
 		s = "(null)";
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (isprint(s[i]))
 			l += _putchar(s[i]);
@@ -30,7 +30,7 @@ int print_char(va_list list)
 {
 	int c = va_arg(list, int);
 
-	if (!isprint(c))
+	if (c == NULL)
 		return (0);
 
 	_putchar(c);
