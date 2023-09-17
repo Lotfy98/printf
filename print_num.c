@@ -8,11 +8,11 @@ int print_integer(va_list list)
 {
 	int x, y, l, n;
 	int num[100];
+
 	if (num == NULL)
-        {
-                return (0);
-        }
-	
+
+	return (0);
+
 	n = va_arg(list, int);
 	l = 0;
 	if (n < 0)
