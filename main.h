@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
-
+#include <ctype.h>
 
 /**
  *struct convert - convert specifier
