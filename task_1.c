@@ -15,8 +15,7 @@ int print_string(va_list list)
 		s = "(null)";
 	while (s[i] != '\0')
 	{
-		if (isprint(s[i]))
-			l += _putchar(s[i]);
+		l += _putchar(s[i]);
 		i++;
 	}
 	return (l);
