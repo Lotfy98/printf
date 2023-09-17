@@ -12,7 +12,7 @@ int print_string(va_list list)
 
 	s = va_arg(list, char *);
 	if (s == NULL)
-		return (0);
+		s = "(null)";
 	while (s[i] != '\0')
 	{
 		if (isprint(s[i]))
@@ -22,7 +22,7 @@ int print_string(va_list list)
 			continue;
 
 		i++;
-		if (i > 200)
+		if (i > 2000)
 			break;
 	}
 	return (l);
