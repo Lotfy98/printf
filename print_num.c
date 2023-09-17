@@ -11,7 +11,7 @@ int print_integer(va_list list)
 
 	/*if (num == NULL)*/
 
-	/*return (0); */
+	/*return (0);*/
 
 	n = va_arg(list, int);
 	l = 0;
@@ -22,7 +22,7 @@ int print_integer(va_list list)
 	}
 	x = 0;
 
-if (n == 0)
+if (n == 0 || num == NULL)
 {
 l += _putchar('0');
 }
