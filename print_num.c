@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  *print_integer - prints an int
  *@list: list of args
