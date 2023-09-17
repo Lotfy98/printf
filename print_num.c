@@ -16,7 +16,7 @@ int print_integer(va_list list)
 	}
 	if (n == 0)
 	{
-		_putchar(n);
+		_putchar(0);
 	}
 	while (t != 0)
 	{
