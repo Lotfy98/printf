@@ -17,13 +17,7 @@ int print_string(va_list list)
 	{
 		if (isprint(s[i]))
 			l += _putchar(s[i]);
-
-		else
-			s = "(null)";
-
 		i++;
-		if (i > 2000)
-			break;
 	}
 	return (l);
 }
