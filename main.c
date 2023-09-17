@@ -11,7 +11,7 @@ int main(void)
 {
 int len;
 int len2;
-int x = 0;
+int x = '\0';
 
 int s = 55;
 char str2[] = " ";
