@@ -6,6 +6,7 @@
  */
 int print_string(va_list list)
 {
+<<<<<<< HEAD
 	int i = 0, l = 0;
 	char *s;
 
@@ -27,7 +28,6 @@ int print_string(va_list list)
 	}
 	return (l);
 }
-
 /**
  * print_char - prints characters
  * @list: list of arguments
