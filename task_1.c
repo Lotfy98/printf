@@ -30,9 +30,6 @@ int print_char(va_list list)
 {
 	int c = va_arg(list, int);
 
-	if (!c)
-		return (0);
-
 	_putchar(c);
 	return (1);
 }
