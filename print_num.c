@@ -22,7 +22,7 @@ int print_integer(va_list list)
 	}
 	x = 0;
 
-if (n == 0 || num == NULL)
+if (n == 0 || n == '\0')
 {
 l += _putchar('0');
 }
