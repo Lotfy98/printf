@@ -6,7 +6,9 @@
  */
 int print_string(va_list list)
 {
-int i = 0, l = 0;
+int i, l; 
+i = 0;
+l = 0;
 char *s;
 s = va_arg(list, char *);
 if (s == NULL)
