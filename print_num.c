@@ -6,40 +6,31 @@
  */
 int print_integer(va_list list)
 {
-	int x, y, l, n;
-	int num[100];
+	long n = va_arg(list, int);
+	int num = 0;
 
-	/*if (num == NULL)*/
-
-	/*return (0);*/
-
-	n = va_arg(list, int);
-	l = 0;
 	if (n < 0)
 	{
-		l += _putchar('-');
+		_putchar('-');
 		n *= -1;
 	}
-	x = 0;
+	if (n == 0)
+	{
+		_putchar(48);
+	}
+	long t = n;
 
-if (n == 0 || n == '\0')
-{
-l += _putchar('0');
-}
-else
-{
-	while (n != 0)
+	while (t != 0)
 	{
-		num[x] = n % 10;
-		n /= 10;
-		x++;
+		num++;
+		t /= 10;
 	}
-	y = x - 1;
-	while (y >= 0)
+	long i = pow(10, num - 1);
+
+	while (i > 0)
 	{
-		l += _putchar(48 + num[y]);
-		y--;
+		_putchar(48 + (n / i) % 10);
+		i /= 10;
 	}
-}
-	return (l);
+	return (num);
 }
