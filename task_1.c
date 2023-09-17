@@ -6,7 +6,6 @@
  */
 int print_string(va_list list)
 {
-<<<<<<< HEAD
 	int i = 0, l = 0;
 	char *s;
 
@@ -18,10 +17,10 @@ int print_string(va_list list)
 	{
 		if (isprint(s[i]))
 			l += _putchar(s[i]);
-		
+
 		else
 			continue;
-		
+
 		i++;
 		if (i > 200)
 			break;
