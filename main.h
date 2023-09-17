@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <ctype.h>
+#include <math.h>
 
 /**
  *struct convert - convert specifier

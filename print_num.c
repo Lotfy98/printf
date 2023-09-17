@@ -6,7 +6,7 @@
  */
 int print_integer(va_list list)
 {
-	long n = va_arg(list, int);
+	long n = va_arg(list, int), t = n, i;
 	int num = 0;
 
 	if (n < 0)
@@ -18,15 +18,12 @@ int print_integer(va_list list)
 	{
 		_putchar(48);
 	}
-	long t = n;
-
 	while (t != 0)
 	{
 		num++;
 		t /= 10;
 	}
-	long i = pow(10, num - 1);
-
+	i = pow(10, num - 1);
 	while (i > 0)
 	{
 		_putchar(48 + (n / i) % 10);
