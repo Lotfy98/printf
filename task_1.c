@@ -13,13 +13,13 @@ int print_string(va_list list)
 	s = va_arg(list, char *);
 	if (s == NULL)
 		s = "(null)";
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if (isprint(s[i]))
 			l += _putchar(s[i]);
 
 		else
-			continue;
+			s = "(null)";
 
 		i++;
 		if (i > 2000)
