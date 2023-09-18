@@ -13,7 +13,7 @@ int _putchar(char c)
 	static char buffer[1024];
 	static int buffer_index;
 
-	if (buffer_index > 1024 || c == '\n')
+	if (buffer_index >= 1024 || c == '\n')
 	{
 		write(1, &buffer, buffer_index);
 		buffer_index = 0;
