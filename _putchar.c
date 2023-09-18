@@ -1,7 +1,4 @@
 #include "main.h"
-#define BUFFER_SIZE 1024
-char buffer[BUFFER_SIZE];
-int buffer_index = 0;
 /**
  * _putchar - write char c to stdout
  *
@@ -11,11 +8,17 @@ int buffer_index = 0;
  */
 int _putchar(char c)
 {
-	if (buffer_index >= BUFFER_SIZE - 1 || c == '\n')
+	static char buffer[1024];
+	static int buffer_index;
+
+	if (buffer_index > 1024 || c == '\n')
 	{
-		write(1, buffer, buffer_index);
+		write(1, &buffer, buffer_index);
 		buffer_index = 0;
 	}
-	buffer[buffer_index++] = c;
+	if (c != '\n')
+	{
+		buffer[buffer_index++] = c;
+	}
 	return (1);
 }
