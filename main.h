@@ -34,5 +34,6 @@ int print_unsigned(va_list list);
 int print_hexa_lower(va_list list);
 int print_hexa_upper(va_list list);
 int parser(const char *format, convert_specs func_list[], va_list args);
+int print_str_ascii(va_list list);
 
 #endif

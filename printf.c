@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{"x", print_hexa_lower},
 		{"X", print_hexa_upper},
 		{"o", print_octal},
+		{"S", print_str_ascii},
 		{NULL, NULL}
 	};
 		/* creating va_list*/
