@@ -4,7 +4,7 @@
 *@list:variadiclist
 *Return:address
 */
-intprint_pointer(va_listlist)
+int print_pointer(va_listlist)
 {
 	void *address;
 	char buffer[20], hex[] = "0123456789abcdef";
