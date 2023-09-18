@@ -12,9 +12,20 @@ int print_unsigned(va_list list)
 
 	num = malloc(sizeof(int) * 100);
 	if (num == NULL)
-		return (0);
+	{
+		_putchar('0');
+		return (1);
+	}
+
 
 	n = va_arg(list, unsigned int);
+if (n == 0)
+{
+_putchar('0');
+free(num);
+return (1);
+}
+
 	while (n != 0)
 	{
 		num[x] = n % 10;

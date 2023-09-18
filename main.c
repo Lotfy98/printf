@@ -9,9 +9,13 @@ int main() {
     unsigned int octal = 01234;
     unsigned int u3 = 4294967295;
     unsigned int max_octal = 017777777777;
+    int *n = NULL; 
     
-    
-    _printf("Max Octal Value: %o\n", max_octal);
+        _printf("Integer: %u\n", n);
+	    printf("Integer: %u\n", n);
+        _printf("Zero u: %u\n", zero);
+	    printf("Zero u: %u\n", zero);
+	    _printf("Max Octal Value: %o\n", max_octal);
     printf("Max Octal Value: %o\n", max_octal);
     _printf("Unsigned Integer 3: %u\n", u3);
     printf("Unsigned Integer 3: %u\n", u3);
