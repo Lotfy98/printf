@@ -9,6 +9,8 @@
 #include <ctype.h>
 #include <math.h>
 
+#define BUFFER_SIZE 1024
+
 /**
  *struct convert - convert specifier
  *@sym: letter
@@ -30,10 +32,7 @@ int print_percent(va_list);
 int print_integer(va_list list);
 int print_binary(va_list list);
 int print_octal(va_list list);
-/*int print_hexa_lower(va_list list);*/
-/*int print_hexa_upper(va_list list);*/
 int print_unsigned(va_list list);
-/*int print_hexa(va_list list, int low_case);*/
 int print_hexa_lower(va_list list);
 int print_hexa_upper(va_list list);
 int parser(const char *format, convert_specs func_list[], va_list args);
