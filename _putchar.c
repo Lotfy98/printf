@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _putchar - write char c to stdout
  *
@@ -8,6 +9,7 @@
  */
 int _putchar(char c)
 {
+
 	static char buffer[1024];
 	static int buffer_index;
 
@@ -16,9 +18,6 @@ int _putchar(char c)
 		write(1, &buffer, buffer_index);
 		buffer_index = 0;
 	}
-	if (c != '\n')
-	{
-		buffer[buffer_index++] = c;
-	}
+	buffer[*buffer_index++] = c;
 	return (1);
 }
