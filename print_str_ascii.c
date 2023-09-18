@@ -4,7 +4,7 @@
  *Non printable characters (0 < ASCII value < 32 or >= 127)
  *are printed this way: \x, followed by the ASCII code value in
  *hexadecimal (upper case - always 2 characters)
- *@list: 
+ *@list: variadic list
  *Return: string with ascii NPC
  */
 int print_str_ascii(va_list list)
@@ -14,7 +14,7 @@ int print_str_ascii(va_list list)
 
 	str = va_arg(list, char *);
 
-	if(!str)
+	if (!str)
 		str = "(null)";
 	while (str[x])
 	{
