@@ -9,15 +9,5 @@
  */
 int _putchar(char c)
 {
-
-	static char buffer[1024];
-	static int buffer_index;
-
-	if (buffer_index >= 1024 || c == '\n')
-	{
-		write(1, &buffer, buffer_index);
-		buffer_index = 0;
-	}
-	buffer[buffer_index++] = c;
-	return (1);
+	return (write(1, &c, 1));
 }
