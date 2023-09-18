@@ -9,7 +9,6 @@
 #include <ctype.h>
 #include <math.h>
 
-#define BUFFER_SIZE 1024
 
 /**
  *struct convert - convert specifier

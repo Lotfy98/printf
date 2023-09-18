@@ -1,5 +1,5 @@
 #include "main.h"
-/*#define BUFFER_SIZE 1024*/
+#define BUFFER_SIZE 1024
 
 /**
  * _putchar - write char c to stdout
