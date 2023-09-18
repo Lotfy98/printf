@@ -22,7 +22,6 @@ int _printf(const char *format, ...)
 		{"X", print_hexa_upper},
 		{"o", print_octal},
 		{NULL, NULL}
-	
 	};
 		/* creating va_list*/
 	va_list args;
