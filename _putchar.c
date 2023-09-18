@@ -18,6 +18,6 @@ int _putchar(char c)
 		write(1, &buffer, buffer_index);
 		buffer_index = 0;
 	}
-	buffer[*buffer_index++] = c;
+	buffer[buffer_index++] = c;
 	return (1);
 }
