@@ -30,7 +30,7 @@ int print_str_ascii(va_list list)
 		else
 		{
 			_putchar(n);
-			n++;
+			c++;
 		}
 	}
 	return (c);
